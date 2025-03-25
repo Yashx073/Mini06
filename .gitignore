@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store
+*.ipynb_checkpoints
+scaler.pkl
+student_model.pkl
+venv/
+.idea/
+.vscode/
+sample.txt
