@@ -32,7 +32,11 @@ def predict():
         # Make a prediction
         prediction = model.predict(input_scaled)
         
-        return jsonify({"prediction": int(prediction[0])})  # Convert NumPy output to int
+        # Make a prediction
+        prediction = model.predict(input_scaled)[0]
+        result = "Placed" if prediction == 1 else "Not Placed"
+        
+        return jsonify({"prediction": result})
     except Exception as e:
         return jsonify({"error": str(e)})
 
